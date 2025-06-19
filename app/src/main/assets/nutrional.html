@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutritional Chart Based on Age</title>
+  <link rel="stylesheet" href="stylesn.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Nutritional Chart Based on Age</h1>
+    <label for="age">Select Age Group:</label>
+    <select id="age" onchange="displayNutritionalChart()">
+      <option value="">Select Age Group</option>
+      <option value="children-2-3">Children (2-3 years)</option>
+      <option value="children-4-6">Children (4-6 years)</option>
+      <option value="children-7-9">Children (7-9 years)</option>
+      <option value="boys-10-12">Boys (10-12 years)</option>
+      <option value="boys-13-15">Boys (13-15 years)</option>
+      <option value="boys-16-17">Boys (16-17 years)</option>
+      <option value="girls-9-13">Girls (9-13 years)</option>
+      <option value="girls-14-18">Girls (14-18 years)</option>
+      <option value="adults">Adults (18+ years)</option>
+    </select>
+
+    <div id="nutritionalChart"></div> <!-- Nutritional chart will be displayed here -->
+  </div>
+
+  <script src="scriptn.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Hide the default arrow for the <details> tag */
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    /* Make sure summary behaves as a button with a cursor */
+    details summary {
+      cursor: pointer;
+    }
+
+    /* Scrollable Diseases dropdown */
+    .dropdown-menu {
+      max-height: 300px; /* Fixed height */
+      overflow-y: auto;  /* Allows scrolling */
+    }
+  </style>
+</head>
+<body class="font-roboto h-full">
+  <!-- Navbar -->
+  <nav class="bg-black text-white p-4 flex justify-between items-center">
+    <div class="text-2xl font-bold">
+      <span class="text-white">Vital</span>
+      <span class="text-blue-500">Hub</span>
+    </div>
+    <div class="space-x-6">
+      <a class="hover:text-blue-500" href="#"><i class="fas fa-home"></i></a>
+      <a class="hover:text-blue-500" href="indexchat.html">CHATBOT</a>
+      <a class="hover:text-blue-500" href="index2.html">BMI Calculator</a>
+      <a class="hover:text-blue-500" href="nutrional.html">Nutritional Chart</a>
+      <a class="hover:text-blue-500" href="#">About</a>
+      <a class="hover:text-blue-500" href="cosmetology.html">Cosmetology</a>
+      <a class="hover:text-blue-500" href="#">FAQ</a>
+      <a class="hover:text-blue-500" href="#">Contact us</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="flex h-full">
+    <!-- Left Section -->
+    <div class="w-2/5 relative">
+      <img alt="Your custom image" class="w-full h-full object-cover" src="image3.jpg"/>
+    </div>
+
+    <!-- Right Section -->
+    <div class="w-3/5 relative">
+      <img alt="Your custom image" class="w-full h-full object-cover" src="image2.jpg"/>
+      <div class="absolute inset-0 flex items-center justify-center">
+        <!-- Diseases Container -->
+        <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm rounded-lg w-[24rem] h-[30rem] relative">
+          <!-- Dropdown Button -->
+          <details class="absolute top-4 left-1/2 transform -translate-x-1/2 text-center">
+            <summary class="bg-gray-700 text-white py-2 px-6 rounded-full text-lg shadow-lg cursor-pointer">
+              Diseases
+            </summary>
+            <div class="dropdown-menu">
+              <ul class="bg-white mt-2 rounded-md shadow-md w-56 mx-auto text-left text-gray-700">
+                <li class="px-4 py-2 hover:bg-gray-100"> <a href="file:///android_asset/28 diseases/AcuteSinusitis.html">Acute Sinusitis</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/Appendicitis.html">Appendicitis</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/Bell’spalsy.html">Bell’spalsy</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/Chickenpox.html">Chickenpox</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/Commoncold.html">Common Cold</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/Conjunctivitis(pink eye).html">Conjunctivitis (Pink Eye)</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/DengueFever.html">Dengue Fever</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/EarInfection.html">Ear Infection</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/Eczema.html">Eczema</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/Epilepsy.html">Epilepsy</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/foodpoisioning.html">Food Poisoning</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/Gout.html">Gout</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/HayFever.html">Hay Fever</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/HiatalHernia.html">Hiatal Hernia</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/Hyperthyroidism.html">Hyperthyroidism</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/Hypoglycemia.html">Hypoglycemia</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/KidneyStones.html">Kidney Stones</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/Malaria.html">Malaria</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/Migraine.html">Migraine</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/Phenylketonuria(PKU).html">Phenylketonuria</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/Pneumonia.html">Pneumonia</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/Sunburn.html">Sunburn</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/Tetanus.html">Tetanus</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/Tinnitus.html">Tinnitus</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/Tonsillitis.html">Tonsillitis</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/Typhoid.html">Typhoid</a></li>
+                <li class="px-4 py-2 hover:bg-gray-100"><a href="file:///android_asset/28 diseases/UrinaryTractInfection (UTI).html">Urinary Tract Infection (UTI)</a></li>
+
+              </ul>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

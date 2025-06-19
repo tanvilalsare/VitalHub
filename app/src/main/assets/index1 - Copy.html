@@ -1,0 +1,246 @@
+<html>
+ <head>
+  <title>
+   VitalHub
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+        .background-design {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            background: url('https://www.transparenttextures.com/patterns/diagonal-stripes.png'), linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .card h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #0A2A4A;
+        }
+        .card input[type="text"], .card input[type="password"], .card input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 20px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.7);
+            transition: background-color 0.3s, box-shadow 0.3s;
+            color: #0A2A4A;
+        }
+        .card input[type="text"]:focus, .card input[type="password"]:focus, .card input[type="email"]:focus {
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 5px #4A90E2;
+            outline: none;
+        }
+        .card button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 20px;
+            border: none;
+            background-color: #4A90E2;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .card button:hover {
+            background-color: #357ABD;
+            transform: translateY(-2px);
+        }
+        .card .divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .card .divider::before, .card .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: white;
+        }
+        .card .divider span {
+            margin: 0 10px;
+            color: #0A2A4A;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header i {
+            font-size: 24px;
+            cursor: pointer;
+            color: #0A2A4A;
+        }
+        .header .title {
+            font-size: 24px;
+            color: #0A2A4A;
+            margin-left: 10px;
+        }
+        .recaptcha {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            color: #0A2A4A;
+        }
+        .recaptcha:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 5px #4A90E2;
+        }
+        .recaptcha img {
+            width: 30px;
+        }
+        .footer {
+            margin-top: 10px;
+        }
+        .footer a {
+            color: #4A90E2;
+            text-decoration: none;
+        }
+        .footer p {
+            color: black;
+        }
+        .hidden {
+            display: none;
+        }
+        .login-text {
+            color: black;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .card {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+  </style>
+  <script>
+   function showCard(cardId) {
+            var cards = document.querySelectorAll('.card');
+            cards.forEach(function(card) {
+                card.classList.add('hidden');
+            });
+            document.getElementById(cardId).classList.remove('hidden');
+        }
+  </script>
+ </head>
+ <body>
+  <div class="background-design"></div>
+  <div class="container">
+   <!-- Welcome Card -->
+   <div class="card" id="welcomeCard">
+    <div class="header">
+     <i class="fas fa-home"></i>
+     <span class="title">VitalHub</span>
+     <span class="menu">
+      <i class="fas fa-bars"></i>
+     </span>
+    </div>
+    <h1>Welcome!</h1>
+    <button onclick="showCard('loginCard')">Login</button>
+    <button onclick="showCard('signUpCard')">Sign Up</button>
+   </div>
+   <!-- Login Card -->
+<div class="card hidden" id="loginCard">
+    <div class="header">
+        <i class="fas fa-home" onclick="showCard('welcomeCard')"></i>
+        <span class="title">VitalHub</span>
+        <span class="menu">
+            <i class="fas fa-bars"></i>
+        </span>
+    </div>
+    <h1>Welcome Back!</h1>
+    <p class="login-text">Login to continue</p>
+    <input placeholder="Username" type="text"/>
+    <input placeholder="Password" type="password"/>
+    <div class="recaptcha">
+        <span>
+            <input type="checkbox"/>
+            I'm not a robot
+        </span>
+        <img alt="reCAPTCHA" src="https://www.gstatic.com/recaptcha/api2/logo_48.png"/>
+    </div>
+    <button onclick="redirectToDashboard()">Login</button>
+
+    <div class="footer">
+        <p>Don't have an account?
+            <a href="#" onclick="showCard('signUpCard')">Sign Up</a>
+        </p>
+        <script>
+            function redirectToDashboard() {
+                window.location.href = "index - Copy.html";
+            }
+        </script>
+        
+    </div>
+</div>
+
+   <!-- Sign Up Card -->
+   <div class="card hidden" id="signUpCard">
+    <div class="header">
+     <i class="fas fa-home" onclick="showCard('welcomeCard')"></i>
+     <span class="title">VitalHub</span>
+     <span class="menu">
+      <i class="fas fa-bars"></i>
+     </span>
+    </div>
+    <h1>Create Account Now!</h1>
+    <input placeholder="First Name:" type="text"/>
+    <input placeholder="Last Name:" type="text"/>
+    <input placeholder="Email:" type="email"/>
+    <input placeholder="Contact info:" type="text"/>
+    <input placeholder="Blood Group:" type="text"/>
+    <input placeholder="Create a password:" type="password"/>
+    <button>Sign Up</button>
+   </div>
+  </div>
+ </body>
+</html>

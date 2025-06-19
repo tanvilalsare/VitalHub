@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+.toggle-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #4facfe;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+
+.container {
+  background: #f0f9ff;
+  color: #1a3e59;
+  width: 90%;
+  max-width: 400px;
+  padding: 25px 35px;
+  border-radius: 16px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border: 1px solid #cce7ff;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #0066cc;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+
+label {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #b3d9ff;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #004a7f;
+  background-color: #f7fcff;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 8px rgba(0, 102, 204, 0.5);
+}
+
+
+.height-input {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.height-input input {
+  flex: 1;
+}
+
+.height-input select {
+  padding: 12px;
+  border: 1px solid #b3d9ff;
+  border-radius: 8px;
+  background-color: #f7fcff;
+  font-size: 1rem;
+  color: #004a7f;
+  cursor: pointer;
+}
+
+.height-input select:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 8px rgba(0, 102, 204, 0.5);
+}
+
+
+button {
+  background: #0066cc;
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #004a99;
+  transform: scale(1.02);
+}
+
+.result-box {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #e6f7ff;
+  color: #004a7f;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: 1px solid #b3e5ff;
+}
+
+.result-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.background-pattern {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: url('https://www.transparenttextures.com/patterns/wave-cut.png') repeat;
+  opacity: 0.1;
+}
+body.dark-mode {
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  color: #e0e0e0;
+}
+
+.container.dark-mode {
+  background: #34495e;
+  color: #ecf0f1;
+}
+
+input.dark-mode {
+  background: #4e5d6c;
+  color: #e0e0e0;
+  border-color: #718093;
+}
+
+button.dark-mode {
+  background: #2c3e50;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  display: block;
+  color: #1a3e59; 
+}
+
+
+body.dark-mode label {
+  color: #ffffff; }
