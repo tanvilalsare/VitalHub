@@ -7,7 +7,8 @@
 
 > ⚠️ **Disclaimer**: This app provides preliminary health information and should not replace professional medical advice.
 
-![WhatsApp Image 2025-06-20 at 12 48 39_bfa82431](https://github.com/user-attachments/assets/963ecb43-6cae-473c-905c-24b2f27ee66f)
+<img src="https://github.com/user-attachments/assets/963ecb43-6cae-473c-905c-24b2f27ee66f" alt="Vital Hub App Screenshot" width="300">
+
 
 
 ## 👥 Team Information
