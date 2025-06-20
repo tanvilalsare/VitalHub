@@ -7,7 +7,7 @@
 
 > ⚠️ **Disclaimer**: This app provides preliminary health information and should not replace professional medical advice.
 
-<img src="https://github.com/user-attachments/assets/963ecb43-6cae-473c-905c-24b2f27ee66f" alt="Vital Hub App Screenshot" width="300">
+<img src="https://github.com/user-attachments/assets/963ecb43-6cae-473c-905c-24b2f27ee66f" alt="Vital Hub App Screenshot" width="250">
 
 
 
